@@ -8,3 +8,11 @@ function getRandomHexColor() {
 
 let intervalId = 0;
 
+function startColorSwitch() {
+    startBtn.disabled = true;
+    stopBtn.disabled = false;
+    intervalId = setInterval(() => {
+        const randomColor = getRandomHexColor();
+        body.style.backgroundColor = randomColor;
+    }, 1000);
+}
