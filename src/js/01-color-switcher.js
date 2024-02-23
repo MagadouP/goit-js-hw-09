@@ -16,3 +16,12 @@ function startColorSwitch() {
         body.style.backgroundColor = randomColor;
     }, 1000);
 }
+function stopColorSwitch() {
+    clearInterval(intervalId);
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+
+}
+
+startBtn.addEventListener('click', startColorSwitch);
+stopBtn.addEventListener('click', stopColorSwitch);
